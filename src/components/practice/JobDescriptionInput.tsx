@@ -9,15 +9,15 @@ export default function JobDescriptionInput() {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="rounded-lg border border-slate-200 bg-white">
+    <div className="rounded-lg border border-neutral-800 bg-neutral-900">
       <button
         type="button"
         onClick={() => setExpanded(!expanded)}
-        className="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors"
+        className="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-neutral-300 hover:bg-neutral-800/50 transition-colors"
       >
         <div className="flex items-center gap-2">
           <svg
-            className="h-4 w-4 text-slate-400"
+            className="h-4 w-4 text-neutral-500"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={2}
@@ -31,13 +31,13 @@ export default function JobDescriptionInput() {
           </svg>
           Job Description Mode
           {jobDescription && (
-            <span className="inline-flex items-center rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700">
+            <span className="inline-flex items-center rounded-full bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-400 border border-amber-500/20">
               Active
             </span>
           )}
         </div>
         <svg
-          className={`h-4 w-4 text-slate-400 transition-transform ${
+          className={`h-4 w-4 text-neutral-500 transition-transform ${
             expanded ? "rotate-180" : ""
           }`}
           fill="none"
@@ -53,14 +53,14 @@ export default function JobDescriptionInput() {
         </svg>
       </button>
       {expanded && (
-        <div className="border-t border-slate-200 px-4 py-3">
+        <div className="border-t border-neutral-800 px-4 py-3">
           <Textarea
             placeholder="Paste a job description here to get tailored questions..."
             value={jobDescription}
             onChange={(e) => setJobDescription(e.target.value)}
             rows={4}
           />
-          <p className="mt-1.5 text-xs text-slate-400">
+          <p className="mt-1.5 text-xs text-neutral-500">
             Optional. Questions will be tailored to the role described above.
           </p>
         </div>

@@ -17,7 +17,7 @@ export default function AnswerFreeform() {
         rows={8}
       />
       <div className="flex items-center justify-between">
-        <span className="text-xs text-slate-400">
+        <span className="text-xs text-neutral-500">
           {answer.length} characters
         </span>
         <Button

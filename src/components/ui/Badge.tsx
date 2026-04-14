@@ -1,15 +1,15 @@
 interface BadgeProps {
   children: React.ReactNode;
-  variant?: "indigo" | "emerald" | "amber" | "rose" | "slate";
+  variant?: "gold" | "emerald" | "amber" | "rose" | "slate";
 }
 
-export default function Badge({ children, variant = "indigo" }: BadgeProps) {
+export default function Badge({ children, variant = "gold" }: BadgeProps) {
   const colors = {
-    indigo: "bg-indigo-50 text-indigo-700 ring-indigo-600/20",
-    emerald: "bg-emerald-50 text-emerald-700 ring-emerald-600/20",
-    amber: "bg-amber-50 text-amber-700 ring-amber-600/20",
-    rose: "bg-rose-50 text-rose-700 ring-rose-600/20",
-    slate: "bg-slate-50 text-slate-700 ring-slate-600/20",
+    gold: "bg-amber-500/10 text-amber-400 ring-amber-500/30",
+    emerald: "bg-emerald-500/10 text-emerald-400 ring-emerald-500/30",
+    amber: "bg-yellow-500/10 text-yellow-400 ring-yellow-500/30",
+    rose: "bg-rose-500/10 text-rose-400 ring-rose-500/30",
+    slate: "bg-neutral-700/50 text-neutral-300 ring-neutral-600/30",
   };
 
   return (

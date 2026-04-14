@@ -13,21 +13,21 @@ const ratingConfig: Record<
 > = {
   strong: {
     label: "Strong",
-    color: "text-emerald-700",
-    bg: "bg-emerald-50",
-    border: "border-emerald-200",
+    color: "text-emerald-400",
+    bg: "bg-emerald-500/10",
+    border: "border-emerald-500/30",
   },
   adequate: {
     label: "Adequate",
-    color: "text-amber-700",
-    bg: "bg-amber-50",
-    border: "border-amber-200",
+    color: "text-amber-400",
+    bg: "bg-amber-500/10",
+    border: "border-amber-500/30",
   },
   "needs-improvement": {
     label: "Needs Improvement",
-    color: "text-rose-700",
-    bg: "bg-rose-50",
-    border: "border-rose-200",
+    color: "text-rose-400",
+    bg: "bg-rose-500/10",
+    border: "border-rose-500/30",
   },
 };
 
@@ -41,7 +41,7 @@ export default function FeedbackCard({
   return (
     <Card className="p-6">
       <div className="flex items-start justify-between gap-4 mb-4">
-        <h3 className="text-lg font-semibold text-slate-900">
+        <h3 className="text-lg font-semibold text-white">
           Overall Assessment
         </h3>
         <span
@@ -50,12 +50,12 @@ export default function FeedbackCard({
           {rating.label}
         </span>
       </div>
-      <p className="text-slate-700 leading-relaxed">{overallAssessment}</p>
+      <p className="text-neutral-300 leading-relaxed">{overallAssessment}</p>
 
-      <div className="mt-5 rounded-lg bg-indigo-50 border border-indigo-100 p-4">
+      <div className="mt-5 rounded-lg bg-amber-500/10 border border-amber-500/20 p-4">
         <div className="flex items-start gap-2">
           <svg
-            className="h-5 w-5 text-indigo-600 mt-0.5 shrink-0"
+            className="h-5 w-5 text-amber-400 mt-0.5 shrink-0"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={2}
@@ -68,10 +68,10 @@ export default function FeedbackCard({
             />
           </svg>
           <div>
-            <p className="text-sm font-medium text-indigo-900">
+            <p className="text-sm font-medium text-amber-300">
               Personalized Tip
             </p>
-            <p className="mt-1 text-sm text-indigo-700">{personalizedTip}</p>
+            <p className="mt-1 text-sm text-amber-400/80">{personalizedTip}</p>
           </div>
         </div>
       </div>

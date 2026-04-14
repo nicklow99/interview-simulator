@@ -19,18 +19,18 @@ export default function QuestionDisplay() {
   return (
     <Card className="p-6 animate-fade-in">
       <div className="flex items-center gap-2 mb-4">
-        <Badge variant="indigo">
+        <Badge variant="gold">
           {CATEGORY_LABELS[question.category]}
         </Badge>
         <Badge variant={difficultyColors[question.difficulty]}>
           {DIFFICULTY_LABELS[question.difficulty]}
         </Badge>
       </div>
-      <p className="text-lg font-medium text-slate-900 leading-relaxed">
+      <p className="text-lg font-medium text-white leading-relaxed">
         {question.question}
       </p>
       {question.context && (
-        <p className="mt-3 text-sm text-slate-500 italic">
+        <p className="mt-3 text-sm text-neutral-500 italic">
           This question tests: {question.context}
         </p>
       )}

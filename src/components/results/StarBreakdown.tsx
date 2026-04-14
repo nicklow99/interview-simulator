@@ -15,7 +15,7 @@ const components = [
 export default function StarBreakdown({ breakdown }: StarBreakdownProps) {
   return (
     <Card className="p-6">
-      <h3 className="text-lg font-semibold text-slate-900 mb-4">
+      <h3 className="text-lg font-semibold text-white mb-4">
         STAR Framework Analysis
       </h3>
       <div className="space-y-4">
@@ -26,15 +26,15 @@ export default function StarBreakdown({ breakdown }: StarBreakdownProps) {
               key={key}
               className={`rounded-lg border p-4 ${
                 component.present
-                  ? "border-emerald-200 bg-emerald-50/50"
-                  : "border-rose-200 bg-rose-50/50"
+                  ? "border-emerald-500/30 bg-emerald-500/5"
+                  : "border-rose-500/30 bg-rose-500/5"
               }`}
             >
               <div className="flex items-center gap-3 mb-2">
                 {component.present ? (
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100">
+                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/20">
                     <svg
-                      className="h-4 w-4 text-emerald-600"
+                      className="h-4 w-4 text-emerald-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={2.5}
@@ -48,9 +48,9 @@ export default function StarBreakdown({ breakdown }: StarBreakdownProps) {
                     </svg>
                   </div>
                 ) : (
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-rose-100">
+                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-rose-500/20">
                     <svg
-                      className="h-4 w-4 text-rose-600"
+                      className="h-4 w-4 text-rose-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={2.5}
@@ -65,13 +65,13 @@ export default function StarBreakdown({ breakdown }: StarBreakdownProps) {
                   </div>
                 )}
                 <div>
-                  <span className="font-semibold text-slate-900">{label}</span>
-                  <span className="ml-2 text-xs text-slate-400">
+                  <span className="font-semibold text-white">{label}</span>
+                  <span className="ml-2 text-xs text-neutral-500">
                     {description}
                   </span>
                 </div>
               </div>
-              <p className="text-sm text-slate-600 ml-9">
+              <p className="text-sm text-neutral-400 ml-9">
                 {component.feedback}
               </p>
             </div>

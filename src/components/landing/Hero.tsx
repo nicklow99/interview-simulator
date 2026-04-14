@@ -3,10 +3,11 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-slate-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent" />
       <div className="relative mx-auto max-w-4xl px-6 py-24 sm:py-32 lg:py-40">
         <div className="text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-medium text-indigo-700">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-amber-500/10 border border-amber-500/20 px-4 py-1.5 text-sm font-medium text-amber-400">
             <svg
               className="h-4 w-4"
               fill="none"
@@ -23,12 +24,12 @@ export default function Hero() {
             AI-Powered Interview Practice
           </div>
 
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Ace Your Next
-            <span className="text-indigo-600"> Interview</span>
+            <span className="gold-shimmer"> Interview</span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-neutral-400">
             Practice behavioral, case, and situational questions tailored to
             your PE background and AI-investing career goals. Get instant,
             detailed feedback powered by Claude AI.
@@ -37,7 +38,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-col items-center gap-4">
             <Link
               href="/practice"
-              className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-8 py-3.5 text-base font-medium text-white shadow-sm transition-all hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-amber-500 to-yellow-500 px-8 py-3.5 text-base font-semibold text-neutral-950 shadow-sm shadow-amber-500/20 transition-all hover:from-amber-400 hover:to-yellow-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-neutral-950"
             >
               Start Practice
               <svg
@@ -57,10 +58,10 @@ export default function Hero() {
           </div>
 
           <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3">
-            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100">
+            <div className="rounded-xl border border-neutral-800 bg-neutral-900/80 p-6 shadow-sm backdrop-blur-sm">
+              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500/10 border border-amber-500/20">
                 <svg
-                  className="h-5 w-5 text-indigo-600"
+                  className="h-5 w-5 text-amber-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -73,17 +74,17 @@ export default function Hero() {
                   />
                 </svg>
               </div>
-              <h3 className="font-semibold text-slate-900">Smart Questions</h3>
-              <p className="mt-1 text-sm text-slate-500">
+              <h3 className="font-semibold text-white">Smart Questions</h3>
+              <p className="mt-1 text-sm text-neutral-400">
                 Behavioral, case, and situational questions across three
                 difficulty levels.
               </p>
             </div>
 
-            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100">
+            <div className="rounded-xl border border-neutral-800 bg-neutral-900/80 p-6 shadow-sm backdrop-blur-sm">
+              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500/10 border border-amber-500/20">
                 <svg
-                  className="h-5 w-5 text-emerald-600"
+                  className="h-5 w-5 text-amber-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -96,19 +97,19 @@ export default function Hero() {
                   />
                 </svg>
               </div>
-              <h3 className="font-semibold text-slate-900">
+              <h3 className="font-semibold text-white">
                 Job Description Mode
               </h3>
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-neutral-400">
                 Paste a job listing and get questions tailored to that specific
                 role.
               </p>
             </div>
 
-            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100">
+            <div className="rounded-xl border border-neutral-800 bg-neutral-900/80 p-6 shadow-sm backdrop-blur-sm">
+              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500/10 border border-amber-500/20">
                 <svg
-                  className="h-5 w-5 text-amber-600"
+                  className="h-5 w-5 text-amber-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -121,10 +122,10 @@ export default function Hero() {
                   />
                 </svg>
               </div>
-              <h3 className="font-semibold text-slate-900">
+              <h3 className="font-semibold text-white">
                 Detailed Feedback
               </h3>
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-neutral-400">
                 STAR framework analysis, strengths, and personalized improvement
                 tips.
               </p>

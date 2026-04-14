@@ -17,7 +17,7 @@ export default function AnswerMultipleChoice() {
     return (
       <div className="flex flex-col items-center justify-center py-12 gap-3">
         <Spinner />
-        <p className="text-sm text-slate-500">Generating answer choices...</p>
+        <p className="text-sm text-neutral-500">Generating answer choices...</p>
       </div>
     );
   }
@@ -26,7 +26,7 @@ export default function AnswerMultipleChoice() {
 
   return (
     <div className="space-y-3 animate-fade-in">
-      <p className="text-sm font-medium text-slate-700">
+      <p className="text-sm font-medium text-neutral-300">
         Select the best answer:
       </p>
       <div className="space-y-2">
@@ -37,21 +37,21 @@ export default function AnswerMultipleChoice() {
             onClick={() => setSelectedChoiceId(choice.id)}
             className={`w-full rounded-lg border-2 p-4 text-left text-sm transition-all ${
               selectedChoiceId === choice.id
-                ? "border-indigo-600 bg-indigo-50 ring-1 ring-indigo-600"
-                : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
+                ? "border-amber-500 bg-amber-500/10 ring-1 ring-amber-500/50"
+                : "border-neutral-800 bg-neutral-900 hover:border-neutral-700 hover:bg-neutral-800/50"
             }`}
           >
             <div className="flex gap-3">
               <span
                 className={`inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${
                   selectedChoiceId === choice.id
-                    ? "bg-indigo-600 text-white"
-                    : "bg-slate-100 text-slate-600"
+                    ? "bg-amber-500 text-neutral-950"
+                    : "bg-neutral-800 text-neutral-400"
                 }`}
               >
                 {choice.id}
               </span>
-              <span className="text-slate-700">{choice.text}</span>
+              <span className="text-neutral-300">{choice.text}</span>
             </div>
           </button>
         ))}

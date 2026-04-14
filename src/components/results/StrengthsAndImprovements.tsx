@@ -13,9 +13,9 @@ export default function StrengthsAndImprovements({
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
       <Card className="p-6">
         <div className="flex items-center gap-2 mb-4">
-          <div className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100">
+          <div className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-500/20">
             <svg
-              className="h-4 w-4 text-emerald-600"
+              className="h-4 w-4 text-emerald-400"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={2.5}
@@ -28,11 +28,11 @@ export default function StrengthsAndImprovements({
               />
             </svg>
           </div>
-          <h3 className="font-semibold text-slate-900">Strengths</h3>
+          <h3 className="font-semibold text-white">Strengths</h3>
         </div>
         <ul className="space-y-2">
           {strengths.map((strength, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
+            <li key={i} className="flex items-start gap-2 text-sm text-neutral-400">
               <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
               {strength}
             </li>
@@ -42,9 +42,9 @@ export default function StrengthsAndImprovements({
 
       <Card className="p-6">
         <div className="flex items-center gap-2 mb-4">
-          <div className="flex h-7 w-7 items-center justify-center rounded-full bg-amber-100">
+          <div className="flex h-7 w-7 items-center justify-center rounded-full bg-amber-500/20">
             <svg
-              className="h-4 w-4 text-amber-600"
+              className="h-4 w-4 text-amber-400"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={2}
@@ -57,11 +57,11 @@ export default function StrengthsAndImprovements({
               />
             </svg>
           </div>
-          <h3 className="font-semibold text-slate-900">Areas to Improve</h3>
+          <h3 className="font-semibold text-white">Areas to Improve</h3>
         </div>
         <ul className="space-y-2">
           {improvements.map((improvement, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
+            <li key={i} className="flex items-start gap-2 text-sm text-neutral-400">
               <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
               {improvement}
             </li>

@@ -19,19 +19,19 @@ export default function PracticePage() {
     useInterview();
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <header className="border-b border-slate-200 bg-white">
+    <div className="min-h-screen bg-neutral-950">
+      <header className="border-b border-neutral-800 bg-neutral-900">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
           <Link
             href="/"
-            className="text-lg font-bold text-slate-900 hover:text-indigo-600 transition-colors"
+            className="text-lg font-bold text-white hover:text-amber-400 transition-colors"
           >
             Interview Simulator
           </Link>
           {phase !== "config" && (
             <button
               onClick={reset}
-              className="text-sm text-slate-500 hover:text-slate-700 transition-colors"
+              className="text-sm text-neutral-500 hover:text-amber-400 transition-colors"
             >
               Start Over
             </button>
@@ -43,7 +43,7 @@ export default function PracticePage() {
         <div className="space-y-6">
           {/* Error display */}
           {error && (
-            <div className="rounded-lg border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700 animate-fade-in">
+            <div className="rounded-lg border border-rose-500/30 bg-rose-500/10 p-4 text-sm text-rose-400 animate-fade-in">
               {error}
             </div>
           )}
@@ -52,10 +52,10 @@ export default function PracticePage() {
           {(phase === "config" || phase === "generating") && (
             <div className="space-y-4 animate-fade-in">
               <div>
-                <h1 className="text-2xl font-bold text-slate-900">
+                <h1 className="text-2xl font-bold text-white">
                   Practice Interview
                 </h1>
-                <p className="mt-1 text-slate-500">
+                <p className="mt-1 text-neutral-400">
                   Choose your question type and difficulty, then generate a
                   question to practice.
                 </p>
@@ -69,7 +69,7 @@ export default function PracticePage() {
           {phase === "generating" && (
             <div className="flex flex-col items-center justify-center py-12 gap-3">
               <Spinner />
-              <p className="text-sm text-slate-500">
+              <p className="text-sm text-neutral-500">
                 Generating your question...
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function PracticePage() {
           {phase === "evaluating" && (
             <div className="flex flex-col items-center justify-center py-8 gap-3">
               <Spinner />
-              <p className="text-sm text-slate-500">
+              <p className="text-sm text-neutral-500">
                 Analyzing your answer...
               </p>
             </div>
@@ -103,10 +103,10 @@ export default function PracticePage() {
           {phase === "results" && feedback && question && (
             <div className="space-y-6 animate-fade-in">
               <div>
-                <h2 className="text-2xl font-bold text-slate-900">
+                <h2 className="text-2xl font-bold text-white">
                   Your Feedback
                 </h2>
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-neutral-500">
                   Here&apos;s how you did on this question.
                 </p>
               </div>

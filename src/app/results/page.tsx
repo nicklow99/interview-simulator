@@ -29,12 +29,12 @@ export default function ResultsPage() {
 
   if (!data) {
     return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+      <div className="min-h-screen bg-neutral-950 flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-xl font-semibold text-slate-900 mb-2">
+          <h2 className="text-xl font-semibold text-white mb-2">
             No feedback available
           </h2>
-          <p className="text-slate-500 mb-6">
+          <p className="text-neutral-500 mb-6">
             Complete a practice question to see your feedback here.
           </p>
           <Link href="/practice">
@@ -48,12 +48,12 @@ export default function ResultsPage() {
   const { feedback, question } = data;
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <header className="border-b border-slate-200 bg-white">
+    <div className="min-h-screen bg-neutral-950">
+      <header className="border-b border-neutral-800 bg-neutral-900">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
           <Link
             href="/"
-            className="text-lg font-bold text-slate-900 hover:text-indigo-600 transition-colors"
+            className="text-lg font-bold text-white hover:text-amber-400 transition-colors"
           >
             Interview Simulator
           </Link>
@@ -63,22 +63,22 @@ export default function ResultsPage() {
       <main className="mx-auto max-w-3xl px-6 py-8">
         <div className="space-y-6">
           <div>
-            <h2 className="text-2xl font-bold text-slate-900">Your Feedback</h2>
-            <p className="mt-1 text-sm text-slate-500">
+            <h2 className="text-2xl font-bold text-white">Your Feedback</h2>
+            <p className="mt-1 text-sm text-neutral-500">
               Here&apos;s how you did on this question.
             </p>
           </div>
 
           <Card className="p-6">
             <div className="flex items-center gap-2 mb-4">
-              <Badge variant="indigo">
+              <Badge variant="gold">
                 {CATEGORY_LABELS[question.category]}
               </Badge>
               <Badge variant="slate">
                 {DIFFICULTY_LABELS[question.difficulty]}
               </Badge>
             </div>
-            <p className="text-lg font-medium text-slate-900 leading-relaxed">
+            <p className="text-lg font-medium text-white leading-relaxed">
               {question.question}
             </p>
           </Card>
